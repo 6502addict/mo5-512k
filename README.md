@@ -23,7 +23,7 @@ bit 4-6    combined with bits 0-1 to extend the bank number
 bit 7      unused
 
 
-the 2 GALS 16v8d can be programmed for example with a TL866 II programmer
+the 2 16v8d GALS (.jed) can be programmed for example with a TL866 II programmer
 
 the 2 vhd files can be modified and recompiled with ISPLever Classic
 from Lattice web site
