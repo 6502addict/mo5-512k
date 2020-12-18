@@ -1,0 +1,12 @@
+Partlist exported from D:/didier/Documents/EAGLE/projects/perso/mo5/512K/ext512K.sch at 17/12/2020 21:44
+
+Qty Value          Device         Package                     Parts                          Description                   
+5   100nf          C-USC1206      C1206                       C1, C2, C3, C4, C7             CAPACITOR, American symbol    
+5   10k            R-EU_R1206     R1206                       R6, R7, R8, R9, R10            RESISTOR, European symbol     
+1   1N4148         DIODEDO-1N4148 DO-1N4148                   D2                             Diode                         
+1   74273N         74273N         DIL20                       74LS273                        Octal D type FLIP FLOP, clear 
+1   AS6C4008-55PCN AS6C4008-55PCN DIP1524W58P254L4191H406Q32N AS6C4008-55PCN                 CMOS SRAM                     
+1   BC547B         BC547B         TO92                        BC547B                         NPN Transistor                
+1   EXT512         PINHD-2X3      2X03                        EXT512K                        PIN HEADER                    
+2   GAL16V8D-15LPN GAL16V8D-15LPN DIP762W56P254L2591H533Q20N  GAL16V8D-A7CB, GAL16V8D-MO512K IC CPLD 8MC 15NS 20DIP        
+1   MEMO5-V2BRD    MEMO5-V2BRD    MEMO5-BOARD                 U$1                                                          
