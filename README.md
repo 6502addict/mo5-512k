@@ -1,8 +1,8 @@
+![al-tag]https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/photo/MO512K.PNG)
+
 # mo5-512k
 MO5 512K Cartridge
 
-BEWARE THIS A WORK IN PROGRESS
-TIL NOW, THIS BOARD HAS NOT BEEN TESTED
 
 this cartridge is compatible with thomson MO5 64k cartrige
 this is a new design
