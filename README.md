@@ -1,4 +1,4 @@
-![al-tag]https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/photo/MO512K.PNG)
+![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/photo/MO512K.PNG)
 
 # mo5-512k
 MO5 512K Cartridge
