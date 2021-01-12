@@ -39,7 +39,8 @@ bit 7      unused
 ```
 
 ## PCB
-the pcb can be ordered from oshpark [link]
+the pcb can be ordered from oshpark<br>
+![al-tag](https://oshpark.com/shared_projects/5IyPA9KX)
 
 ## Bill of Materials
 * 1 x socket  dip 32  600mil
