@@ -12,7 +12,6 @@ entity MO5A7CB is
 
 
 attribute LOC : string;
---attribute LOC of a       : signal is "P12, P13, P14, P17, P18, P19, P11, P9, P8, P7, P6, P5, P4, P3, P2, P1"; 
 attribute LOC of a       : signal is "P1, P2, P3, P4, P5, P6, P7, P8, P9, P11, P19, P18, P17, P14, P13, P12";
 -- P10 GND
 attribute LOC of spare   : signal is "P15";

@@ -25,18 +25,19 @@ entity MO512K is
 attribute LOC : string;
 attribute LOC of wen       : signal is "P1";
 attribute LOC of e         : signal is "P2";
-attribute LOC of csc       : signal is "P1";
-attribute LOC of a7cb      : signal is "P1";
+attribute LOC of rw        : signal is "P3";
+attribute LOC of csc       : signal is "P4";
+attribute LOC of a7cb      : signal is "P5";
 attribute LOC of clrn      : signal is "P6";
 -- P10 GND
 attribute LOC of spare0    : signal is "P12";
 attribute LOC of spare1    : signal is "P13";
 attribute LOC of spare2    : signal is "P14";
 attribute LOC of rwe       : signal is "P15";
-attribute LOC of roe       : signal is "P15";
-attribute LOC of rce       : signal is "P15";
-attribute LOC of clr       : signal is "P15";
-attribute LOC of clk       : signal is "P15";
+attribute LOC of roe       : signal is "P16";
+attribute LOC of rce       : signal is "P17";
+attribute LOC of clr       : signal is "P18";
+attribute LOC of clk       : signal is "P19";
 -- P20 VCC
 
 end;
@@ -48,10 +49,11 @@ begin
 	spare2 <= 'H';
 
 	
-	rwe <= '0' when (rw = '1')   and (wen = '1')              else '1';
-	rce <= '0' when (csc = '0')  and (e = '1')                else '1';
-	roe <= '0' when (csc = '0')  and (e = '1') and (rw = '1') else '1';
-	clk <= '0' when (a7cb = '0') and (rw = '0')               else '1';
-	clr <= '1' when (clrn = '0')                              else '0';
+	rwe <= '0' when (rw = '0')   and (wen = '1')               else '1';
+	rce <= '0' when (csc = '0')  and (e = '1')                 else '1';
+	roe <= '0' when (csc = '0')  and (e = '1') and (rw = '1')  else '1';
+
+	clk <= '1' when (a7cb = '0') and (rw = '0') and (e = '1')  else '0';
+	clr <= clrn;
 	 
 end behavioral;
