@@ -5,8 +5,8 @@ MO5 512K Cartridge
 <br>
 ## Description
 this cartridge is compatible with thomson MO5 64k cartridge
-it's not a exact copy of the original cartridge
-but a rebuild from the manual
+it's not a exact copy of the original cartridge<br>
+but rather a rebuild from the manual
 <br>
 the $A7CB register controlling a MO5 64 cartrige is extended
 to permit the access to 512k of memory
@@ -38,7 +38,23 @@ bit 4-6    extend the bank number
 bit 7      unused
 ```
 
+## PCB
+the pcb can be ordered from oshpark [link]
 
+## Bill of Materials
+* 1 x socket  dip 32  600mil
+* 3 x sockets dip 20  300mil
+* 1 74LS273
+* 1 RAM Alliance AS6C4008
+* 2 GAL Lattice 16v8D
+* 1 diode 1N4148
+* 5 resistor 10k    1206
+* 5 capacitor 100nf 1206
+
+## GAL Programming
+the GALS can be easily programmed with a TL866-II plus programmer
+GAL-16V8D-AC7B is going in the horizontal socket  (check the marking)
+GAL-16V8D-MO512K is going in the vertical socket
 
 the 2 16v8d GALS (.jed) can be programmed for example with a TL866 II programmer
 
