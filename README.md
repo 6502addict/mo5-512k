@@ -52,11 +52,9 @@ the pcb can be ordered from oshpark [link]
 * 5 capacitor 100nf 1206
 
 ## GAL Programming
-the GALS can be easily programmed with a TL866-II plus programmer
+the GALS can be easily programmed with a TL866-II plus programmer<br>
 GAL-16V8D-AC7B is going in the horizontal socket  (check the marking)
 GAL-16V8D-MO512K is going in the vertical socket
-
-the 2 16v8d GALS (.jed) can be programmed for example with a TL866 II programmer
 
 the 2 vhd files can be modified and recompiled with ISPLever Classic
 from Lattice web site 
