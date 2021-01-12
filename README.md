@@ -50,14 +50,27 @@ the pcb can be ordered from oshpark [link]
 * 1 diode 1N4148
 * 5 resistor 10k    1206
 * 5 capacitor 100nf 1206
+* 1 block of 3 jumpers
 
-## GAL Programming
+## GAL programming
 the GALS can be easily programmed with a TL866-II plus programmer<br>
-GAL-16V8D-AC7B is going in the horizontal socket  (check the marking)
+GAL-16V8D-AC7B is going in the horizontal socket  (check the marking)<br>
 GAL-16V8D-MO512K is going in the vertical socket
 
-the 2 vhd files can be modified and recompiled with ISPLever Classic
-from Lattice web site 
+## GAL compiling
+The .JED files are sufficent to build the board<br>
+they can be recompiled from the .VHD by using:<br>
+"Lattice ispLEVER Classic"
+
+## Build of the board
+the easiest is to solder the component in the following order<br>
+1. 5 100nf capacitor (back of the board)<br>
+2. 5 10k resistor (back of the board)<br>
+3. 4 sockets<br
+4. BC547B<br>
+5. 1N4148<br>
+6. jumpers<br>
+
 
 
 
