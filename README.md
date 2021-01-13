@@ -23,7 +23,7 @@ bits 0-1   bank number
 bit 2      1 = ram visible
            0 = basic
 bit 3      1 cartridge ram is readable and writable
-           0  cartridge ram is readable and writable
+           0  cartridge ram is readable and read only
 bits 4-7   unused        
 ```
 
@@ -33,7 +33,7 @@ bits 0-1   bank number
 bit 2      1 = ram visible
            0 = basic
 bit 3      1 cartridge ram is readable and writable
-           0  cartridge ram is readable and writable
+           0  cartridge ram is readable and read only
 bit 4-6    extend the bank number
 bit 7      unused
 ```
