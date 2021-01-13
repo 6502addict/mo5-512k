@@ -14,7 +14,7 @@ to permit the access to 512k of memory
 without the 3 jumpers the cartridge is behaving as the 
 original thomson MEMO5 cartridge
 <br>
-with the jumpers set the cartridge 4 address 512k or memory
+with the jumpers set the cartridge can address 512k or memory
 <br>
 
 ## Control Register in $A7CB (without jumpers)
