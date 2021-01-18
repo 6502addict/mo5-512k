@@ -1,8 +1,9 @@
 library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
+ use ieee.std_logic_1164.all;
+ use ieee.std_logic_arith.all;
+ use ieee.std_logic_unsigned.all;
 
+-- first we defined the signals used
 entity MO512K is
 	PORT (
 		wen        : in   std_logic;
@@ -21,7 +22,7 @@ entity MO512K is
 		clk	   : out  std_logic
 	);
 
-
+-- then we associate the signals with a pin number
 attribute LOC : string;
 attribute LOC of wen       : signal is "P1";
 attribute LOC of e         : signal is "P2";
@@ -44,16 +45,36 @@ end;
 
 architecture behavioral of MO512K is
 begin
-	spare0 <= 'H';
-	spare1 <= 'H';
-	spare2 <= 'H';
+	-- we connect the unused pins to GND
+	spare0 <= '0';
+	spare1 <= '0';
+	spare2 <= '0';
 
-	
+	-- *** control signals form the ram chip ***
+	-- we create the ram WE signal from 6809 R/W and WEN coming from the 74LS273
+	-- rwe is '0' only if rw is '0' and wen is '1'  (not write protected)
 	rwe <= '0' when (rw = '0')   and (wen = '1')               else '1';
-	rce <= '0' when (csc = '0')  and (e = '1')                 else '1';
-	roe <= '0' when (csc = '0')  and (e = '1') and (rw = '1')  else '1';
 
-	clk <= '1' when (a7cb = '0') and (rw = '0') and (e = '1')  else '0';
+	-- we create the ram chip select CE
+        -- rce is '0' csc is '0'  (cartridge in use) and 6809 E phase is '1'	
+	rce <= '0' when (csc = '0')  and (e = '1')                 else '1';
+
+	-- we create the output enable OE for the ram chip
+	-- roe is '0' only if the cartridge is in use, and 6809 E phase is '1' and 6809 rw signal in read mode ('1')
+	roe <= '0' when (csc = '0')  and (e = '1') and (rw = '1')  else '1';
+	-- *****************************************
+
+
+	-- *** control signals form the 74LS273 ***
+	-- in the original chip 74LS173 clr was using a positive logic and had to be inverted
+	-- with the 74LS273 clr is using negative logic, so we just connect CLR to CLRN
 	clr <= clrn;
-	 
+
+	-- we create the CLK signal for the LS273  (74LS273 is using  a positive logic for CLK)
+        -- so CLK is '1' only if the address $A7CB is selected (atcb = '0')
+        -- a write is performed (rw = '0')
+        -- and 6809 e phase is '1'
+	clk <= '1' when (a7cb = '0') and (rw = '0') and (e = '1')  else '0';
+	-- *****************************************
+
 end behavioral;
