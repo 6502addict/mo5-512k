@@ -2,7 +2,7 @@
 WORK IN PROGRESS !!!
 <br>
 ## Description
-if the cartridge is not working, we Daniel's tests
+if the cartridge is not working, with Daniel's tests
 we will check step by step  the components of the board.
 
 ## Tools
@@ -10,11 +10,13 @@ we will do that with 2 tools
 1/  a TL866 II plus programmer
 2/  a 8 channels logic analyser  (around 10€ on amazon)
 
-# Check the 74LS273
+# Component Check
+
+## Check the 74LS273
 select "logic test" on the programmer and clic on "autofind"
 the programmer should detect a "74273"
 
-# Check the RAM chip
+## Check the RAM chip
 select device "SRAM/VRAM" then select "Standard RAM"
 and choose 628512 and press "select"
 then in the new windows click on "TEST"
