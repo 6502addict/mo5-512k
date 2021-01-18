@@ -72,7 +72,8 @@ the easiest is to solder the component in the following order<br>
 5. 1N4148<br>
 6. jumpers<br>
 
-
+## Test programs
+the test program is on Daniel's web site:  http://dcmoto.free.fr/programmes/test512k-mo5/index.html
 
 
 
