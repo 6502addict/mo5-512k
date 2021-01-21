@@ -29,20 +29,23 @@ then in the new windows click on "TEST"
 <br>
 
 ## Check the GAL16V8D-A7CB
-To test this chip we will use a simple basic program
-and the 8 channels analyser
+the GAL16V8D-A7CB (horizontal) produce a chip select when the latch 74LS273 is accessed
+as it is not possible to connect the analyser directly on this GAL
+we will test it on the entry of this signal on the GAL16V8D-MO512K (vertical)
 
-it is not really possible to connect wires on this GAL
-so we connect the wire to the second GAL  (vertical)
-GND of the analyser to pin 10 of the GAL<br>
-CH1 to pin 5
+Connections to realise between the logic analyser and the GAL
+- GND to pin 10   "GND"
+- CH1 to pin 5    "A7CB"     
+
+Program to run
+Start he MO5 and select "test512k.sd" in sddrive menu
 <br>
-on the MO5 select "test512k.sd" on sddrive menu
+in the basic load  "A7CB-CS"
 <br>
-then in the basic load  "TESTA7CB"
+run the basic program
 <br>
-and run the basic program
 <br>
+Capture the data with the analyser
 you should get the following pattern
 <br>
 ![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/A7CB.PNG)
@@ -53,6 +56,30 @@ if the you have not a similar probleme check the following signals:
 - eventually program another GAL with GAL16V8D-A7CB.jed
 
 ## Check the GAL16V8D-MO512k latch control signals
+the GAL 16V8D-MO512K controls 3 functions
+- the generation of CLR and CLK signals for the 74LS273
+- the generation of the control signals for the ram chip
+
+Connections to realise between the logic analyser and the GAL
+- GND to pin 10    "GND"
+- CH1 to pin  2    "E" 
+- CH2 to pin  3    "R/W"
+- CH3 to pin  5    "ATCB"
+- CH4 to pin 19    "CLK" 
+
+Program to run
+Start he MO5 and select "test512k.sd" in sddrive menu
+<br>
+in the basic load  "LATCH-CLK"
+<br>
+run the basic program
+<br>
+<br>
+Capture the data with the analyser
+you should get the following pattern
+<br>
+![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/CLK.PNG)
+<br>
 
 ## Check the 74LS273 functions
 
