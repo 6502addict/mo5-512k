@@ -32,6 +32,15 @@ then in the new windows click on "TEST"
 To test this chip we will use a simple basic program
 and the 8 channels analyser
 
+it is not really possible to connect wires on this GAL
+so we connect the wire to the second GAL  (vertical)
+GND of the analyser to pin 10 of the GAL<br>
+CH1 to pin 5
+<br>
+you should get the following pattern
+
+
+
 
 
 ## Check the GAL16V8D-MO512k latch control signals
