@@ -39,7 +39,7 @@ CH1 to pin 5
 <br>
 you should get the following pattern
 <br>
-![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/Debug Procedure/A7CB.PNG)
+![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/A7CB.PNG)
 <br>
 
 
