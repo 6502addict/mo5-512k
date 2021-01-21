@@ -37,11 +37,20 @@ so we connect the wire to the second GAL  (vertical)
 GND of the analyser to pin 10 of the GAL<br>
 CH1 to pin 5
 <br>
+on the MO5 select "test512k.sd" on sddrive menu
+<br>
+then in the basic load  "TESTA7CB"
+<br>
+and run the basic program
+<br>
 you should get the following pattern
 <br>
 ![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/A7CB.PNG)
 <br>
-
+if the you have not a similar probleme check the following signals:
+- the address lines from the MO5 connector to the GAL-A7CB pins
+- check the solders of the GAL chip
+- eventually program another GAL with GAL16V8D-A7CB.jed
 
 ## Check the GAL16V8D-MO512k latch control signals
 
