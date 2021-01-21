@@ -38,9 +38,9 @@ GND of the analyser to pin 10 of the GAL<br>
 CH1 to pin 5
 <br>
 you should get the following pattern
-
-
-
+<br>
+![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/Debug Procedure/A7CB.PNG)
+<br>
 
 
 ## Check the GAL16V8D-MO512k latch control signals
