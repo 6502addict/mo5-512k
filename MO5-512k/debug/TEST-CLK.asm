@@ -1,0 +1,7 @@
+;-test 74LS273 CLK signal
+	ORG	$9000
+LOOP	LDA	#$00
+	STA	$A7CB
+	BRA	LOOP
+	END
+
