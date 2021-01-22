@@ -48,7 +48,9 @@ run the basic program
 Capture the data with the analyser
 <br>
 with the following settings:
+<br>
 https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/setup-A7CB.logicsettings
+<br>
 you should get the following pattern
 <br>
 ![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/A7CB.PNG)
@@ -79,6 +81,11 @@ run the basic program
 <br>
 <br>
 Capture the data with the analyser
+<br>
+with the following settings:
+<br>
+https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/setup-CLK.logicsettings
+<br>
 you should get the following pattern
 <br>
 ![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/CLK.PNG)
