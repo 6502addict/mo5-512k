@@ -64,7 +64,7 @@ Connections to realise between the logic analyser and the GAL
 - GND to pin 10    "GND"
 - CH1 to pin  2    "E" 
 - CH2 to pin  3    "R/W"
-- CH3 to pin  5    "ATCB"
+- CH3 to pin  5    "A7CB"
 - CH4 to pin 19    "CLK" 
 
 Program to run
