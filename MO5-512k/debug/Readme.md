@@ -1,5 +1,4 @@
 # MO5 512k Cartridge Debug Procedure
-WORK IN PROGRESS !!!
 <br>
 ## Description
 If the cartridge is not working, with Daniel's tests
