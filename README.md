@@ -96,6 +96,7 @@ the easiest is to solder the component in the following order<br>
 the test program is on Daniel's web site:  http://dcmoto.free.fr/programmes/test512k-mo5/index.html
 
 
-
+## Test procedure
+follow the instructions in https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug
 
 
