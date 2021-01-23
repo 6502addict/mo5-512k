@@ -40,7 +40,7 @@ Connections to realise between the logic analyser and the GAL
 Program to run
 Start he MO5 and select "test512k.sd" in sddrive menu
 <br>
-in the basic load  "A7CB-CS"
+in the basic load  "A7CB"
 <br>
 run the basic program
 <br>
@@ -75,7 +75,7 @@ Connections to realise between the logic analyser and the GAL
 Program to run
 Start he MO5 and select "test512k.sd" in sddrive menu
 <br>
-in the basic load  "LATCH-CLK"
+in the basic load  "CLK"
 <br>
 run the basic program
 <br>
@@ -96,6 +96,40 @@ if the you have not a similar probleme check the following signals:
 - eventually program another GAL with GAL16V8D-MO512K.jed
 
 ## Check the 74LS273 functions
+the 74LS273 select the active bank as well as the cartridge/basic acces
+and protect from the write to the ram chip
 
+Connections to realise between the logic analyser and the GAL
+- GND to pin 10    "GND"
+- CH1 to pin 11    "CLK" 
+- CH2 to pin  2    "BANK0"
+- CH3 to pin  5    "BANK1"
+- CH4 to pin  6    "BASIC/CART" 
+- CH5 to pin  9    "WEN" 
+- CH6 to pin  12   "BANK2" 
+- CH7 to pin  15   "BANK3" 
+- CH7 to pin  16   "BANK4" 
+
+Program to run
+Start he MO5 and select "test512k.sd" in sddrive menu
+<br>
+in the basic load  "74LS273"
+<br>
+run the basic program
+<br>
+<br>
+Capture the data with the analyser
+<br>
+with the following settings:
+<br>
+https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/setup-74LS273.logicsettings
+<br>
+you should get the following pattern
+<br>
+![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/74LS273.PNG)
+<br>
+if the you have not a similar probleme check the following signals:
+- the lines: D0 to D7, CLK and CLR
+- check the solders of the GAL chip
 
 ## Check the GAL16V8D-MO512K RAM control signals
