@@ -133,3 +133,44 @@ if the you have not a similar probleme check the following signals:
 - check the solders of the GAL chip
 
 ## Check the GAL16V8D-MO512K RAM control signals
+the GAL GAL16V8D-MO512K also control the control signals for the ram chip
+
+
+Connections to realise between the logic analyser and the GAL
+- GND to pin 10    "GND"
+- CH1 to pin  1    "WEN" 
+- CH2 to pin  2    "E"
+- CH3 to pin  3    "R/W"
+- CH4 to pin  4    "CSC" 
+- CH5 to pin  5    "A7CB 
+- CH6 to pin  17   "RCE" 
+- CH7 to pin  16   "ROE" 
+- CH7 to pin  15   "RWE" 
+
+Program to run
+Start he MO5 and select "test512k.sd" in sddrive menu
+<br>
+in the basic load  "RAMCTRL"
+<br>
+run the basic program
+<br>
+<br>
+Capture the data with the analyser
+<br>
+with the following settings:
+<br>
+https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/setup-RAMCTRL.logicsettings
+<br>
+you should get the following pattern
+<br>
+![al-tag](https://github.com/6502addict/mo5-512k/blob/main/MO5-512k/debug/RAMCTRL.PNG)
+<br>
+This one needs a bit more explanations
+<br>
+there are 2 phases
+- in the first phase wen is set to 1 and a read and a write occurs
+- in the second phase wen is set to 0 and a read occurs but a write is blocked (no signal on RWE)
+<br>
+if the you have not a similar probleme check the following signals:
+- the lines: WEN, E, R/W, CSC, A7CB
+- check the solders of the GAL chip
